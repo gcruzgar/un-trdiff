@@ -36,13 +36,19 @@ Exploration of the United Nations corpus and prediction of translation difficult
 
 ### XLM - TER (sentence Level)
 
-|Regression Algorithm      | Correlation | MAE |
+|Regression Algorithm*     | Correlation | MAE |
 |--------------------------|-------------|-----|
-|Linear Regression         | |
-|Support Vector Regression | |
+|Support Vector Regression | 0.27 | |
+|Linear Regression         | 0.42 | |
+|Adaboost (Decision Tree)  | 0.39 | |
 
-| Classification Algorithm     | Precision | Recall | f1-score | 
-|------------------------------|-----------|--------|----------|
-|Support Vector Classification | | |
-|MultiLayer Perceptron         | | |
-|Adaboost (Decision Tree)      | | |
+|Classification Algorithm*     | En-Es | En-Fr | 
+|------------------------------|-------|-------|
+|Support Vector Classification | 0.54  |  0.53 |
+|MultiLayer Perceptron         | 0.54  |  0.51 |
+|Adaboost (Decision Tree)      | 0.48  |  0.50 |
+
+* Regression results on 200,000 English to French sentences.
+* Accuracy on 3-class division (easy/average/difficult translation) using 200,000 sentences. 
+
+See [results](results/) folder for complete scores. This includes other methods like stochastic gradient descent or naive-Bayes classification but these obtained similar results and are omitted for simplicity.
