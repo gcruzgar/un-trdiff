@@ -23,7 +23,7 @@ Exploration of the United Nations corpus and prediction of translation difficult
 Biber dimensions (lexical, syntactic, text-level... features in texts) can be used to build regression models predicting the rate of translation of documents. A correlation of 0.65 can be obtained using linear regression (see figure 3). 
 
 ![UN_wpd_OLS](img/un_wpd_ols.png)   
-**Figure 3.** Rate of translation of documents. Predicted rate against reported rate. The solid black line shows the real values whilst the red dotted line shows an approximate line of best fit for the results obtained.
+**Figure 3.** Rate of translation of documents predicted using Biber dimensions on a text level. Predicted rate against reported rate. The solid black line shows the real values whilst the red dotted line shows an approximate line of best fit for the results obtained.
 
 ![UN_TER_Histogram](img/un_ter_hist.png)    
 **Figure 4.** Distribution of translation edit rate for machine translated sentences with human reference for UN documents after removal of top and bottom 5% of TER scores. Original documents in English translated to Spanish (left) and French (right). 
