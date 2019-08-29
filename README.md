@@ -26,6 +26,10 @@ Exploration of the United Nations corpus and prediction of translation difficult
 ![UN_TER_PerSec](img/un_ter_wps.png)    
 **Figure 4.** Correlation of TER of machine translated sentences versus words translated per second for human translation of the same sentences.
 
+### Time Taken - Sentence Length
+
+The time taken to translate a sentence is dependent on the number of words it contains (see figure 5), however, there are still great differences between equal length sentences. There is a 0.65 correlation between time and sentence length for French translations and 0.70 for Spanish translations for the timed sentences (around 300 sentences). Note that the sentences used for Spanish translation are different to those used for French, therefore there will be some differences that are not entirely due to language properties. 
+
 ![Fr_Timed_Sentences_Time_Words](img/french_time_words.png)    
 **Figure 5.** Time taken to translate a sentence against the number of words in the sentence.
 
@@ -36,11 +40,11 @@ Exploration of the United Nations corpus and prediction of translation difficult
 
 ### XLM - TER (sentence Level)
 
-|Regression Algorithm*     | Correlation | MAE |
-|--------------------------|-------------|-----|
-|Support Vector Regression | 0.27 | |
-|Linear Regression         | 0.42 | |
-|Adaboost (Decision Tree)  | 0.39 | |
+|Regression Algorithm*     | Correlation | MSE   |
+|--------------------------|-------------|-------|
+|Support Vector Regression | 0.27        | 0.029 |
+|Linear Regression         | 0.42        | 0.026 |
+|Adaboost (Decision Tree)  | 0.39        | 0.027 |
 
 |Classification Algorithm*     | En-Es | En-Fr | 
 |------------------------------|-------|-------|
