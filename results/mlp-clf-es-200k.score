@@ -1,0 +1,12 @@
+classification report:
+
+                     precision    recall  f1-score   support
+
+   good translation       0.55      0.56      0.56     13037
+average translation       0.46      0.46      0.46     13292
+    bad translation       0.61      0.60      0.60     12971
+
+           accuracy                           0.54     39300
+          macro avg       0.54      0.54      0.54     39300
+       weighted avg       0.54      0.54      0.54     39300
+

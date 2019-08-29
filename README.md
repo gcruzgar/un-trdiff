@@ -31,3 +31,18 @@ Exploration of the United Nations corpus and prediction of translation difficult
 
 ![Fr_Timed_Sentences_Time_Words_MAE](img/french_time_words_MAE.png)     
 **Figure 5.** Time taken to translate a sentence against the number of words in the sentence. The dotted red lines show the mean absolute error from the line of best fit. Sentences above the superior line could be considered difficult whilst those below the inferior line would be easy to translate.
+
+## Prediction Experiments
+
+### XLM - TER (sentence Level)
+
+|Regression Algorithm      | Correlation | MAE |
+|--------------------------|-------------|-----|
+|Linear Regression         | |
+|Support Vector Regression | |
+
+| Classification Algorithm     | Precision | Recall | f1-score | 
+|------------------------------|-----------|--------|----------|
+|Support Vector Classification | | |
+|MultiLayer Perceptron         | | |
+|Adaboost (Decision Tree)      | | |

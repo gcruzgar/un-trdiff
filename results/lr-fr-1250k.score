@@ -1,0 +1,3 @@
+data points below 0.05 or above 0.95 quantiles removed
+r2-score: 0.1900
+MSE: 0.026
