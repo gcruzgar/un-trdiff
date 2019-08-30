@@ -4,7 +4,7 @@ Exploration of the United Nations corpus and prediction of translation difficult
 ## Things to cover
 
 - Descriptive statistics of data
-- Histograms + mean and medain values
+- Histograms + mean and median values
 - Correlation of sentence length and time taken to translate
 - Show 2 or 3 easy and difficult sentence examples for en-fr and en-es
 - Prediction experiments:
@@ -14,32 +14,39 @@ Exploration of the United Nations corpus and prediction of translation difficult
     + TER - time per sentence
 
 ## United Nations Corpus
+As one would expect, the time it takes to translate a document is roughly proportional to the number of words it contains (see figure 1). Nonetheless, there is great variance between documents. If time taken was only dependent on the length of a document, the rate of translation (words per day) would be a constant. In the case of the tested UN corpus this would be approximately 1429 words per day. However, as we can see in figure 2, there is a large distribution of translation rates across the documents (standard deviation of 484 words per day). Therefore, there must be other variables causing such differences. 
+
 ![UN_Words_PerDay](img/un_words_per_day.png)    
 **Figure 1.** Time it took to translate a document against the length of the document in words for a set of approximately 250 United Nations public documents.
 
-![UN_Words_PerDay_Category](img/un_wpd_category.png)    
+![UN_Words_PerDay_KDE](img/un_wpd_kde.png)    
 **Figure 2.** Distribution of translation rate (words per day) for a set of approximately 250 United Nations public documents.
 
-Biber dimensions (lexical, syntactic, text-level... features in texts) can be used to build regression models predicting the rate of translation of documents. A correlation of 0.65 can be obtained using linear regression (see figure 3). 
+Documents can be split into categories depending on things such as the topic of the text. In the case of the labeled UN corpus, documents can be split according to the department or committee that emitted the document. These categories may exhibit different behaviours and offer further insight into the varience in translation rate. An example of this is shown in figure 3, where the average translation rate of each category is displayed along with standard deviations.
+
+![UN_Words_PerDay_Category](img/un_wpd_category.png)    
+**Figure 3.** Distribution of translation rate (words per day) for each category of documents in the timed United Nations corpus.
+
+Biber dimensions (lexical, syntactic, text-level... features in texts) can be used to build regression models predicting the rate of translation of documents. A correlation of 0.65 can be obtained using linear regression (see figure 4). 
 
 ![UN_wpd_OLS](img/un_wpd_ols.png)   
-**Figure 3.** Rate of translation of documents predicted using Biber dimensions on a text level. Predicted rate against reported rate. The solid black line shows the real values whilst the red dotted line shows an approximate line of best fit for the results obtained.
+**Figure 4.** Rate of translation of documents predicted using Biber dimensions on a text level. Predicted rate against reported rate. The solid black line shows the real values whilst the red dotted line shows an approximate line of best fit for the results obtained.
 
 ![UN_TER_Histogram](img/un_ter_hist.png)    
-**Figure 4.** Distribution of translation edit rate for machine translated sentences with human reference for UN documents after removal of top and bottom 5% of TER scores. Original documents in English translated to Spanish (left) and French (right). 
+**Figure 5.** Distribution of translation edit rate for machine translated sentences with human reference for UN documents after removal of top and bottom 5% of TER scores. Original documents in English translated to Spanish (left) and French (right). 
 
 ![UN_TER_PerSec](img/un_ter_wps.png)    
-**Figure 5.** Correlation of TER of machine translated sentences versus words translated per second for human translation of the same sentences.
+**Figure 6.** Correlation of TER of machine translated sentences versus words translated per second for human translation of the same sentences.
 
 ### Time Taken - Sentence Length
 
-The time taken to translate a sentence is dependent on the number of words it contains (see figure 6), however, there are still great differences between equal length sentences. There is a 0.65 correlation between time and sentence length for French translations and 0.70 for Spanish translations for the timed sentences (around 300 sentences). Note that the sentences used for Spanish translation are different to those used for French, therefore there will be some differences that are not entirely due to language properties. 
+The time taken to translate a sentence is dependent on the number of words it contains (see figure 7), however, there are still great differences between equal length sentences. There is a 0.65 correlation between time and sentence length for French translations and 0.70 for Spanish translations for the timed sentences (around 300 sentences). Note that the sentences used for Spanish translation are different to those used for French, therefore there will be some differences that are not entirely due to language properties. 
 
 ![Fr_Timed_Sentences_Time_Words](img/french_time_words.png)    
-**Figure 6.** Time taken to translate a sentence against the number of words in the sentence.
+**Figure 7.** Time taken to translate a sentence against the number of words in the sentence.
 
 ![Fr_Timed_Sentences_Time_Words_MAE](img/french_time_words_MAE.png)     
-**Figure 7.** Time taken to translate a sentence against the number of words in the sentence. The dotted red lines show the mean absolute error from the line of best fit. Sentences above the superior line could be considered difficult whilst those below the inferior line would be easy to translate.
+**Figure 8.** Time taken to translate a sentence against the number of words in the sentence. The dotted red lines show the mean absolute error from the line of best fit. Sentences above the superior line could be considered difficult whilst those below the inferior line would be easy to translate.
 
 ## Prediction Experiments
 
