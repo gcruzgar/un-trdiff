@@ -1,5 +1,6 @@
 # un-trdiff
-Exploration of the United Nations corpus and prediction of translation difficulty
+Exploration of the United Nations corpus and prediction of translation difficulty.
+See [trdiff]((https://github.com/gcruzgar/trdiff) for more information as well as the scripts used to produce the insights shown below.
 
 ## Things to cover
 
@@ -37,6 +38,8 @@ Biber dimensions (lexical, syntactic, text-level... features in texts) can be us
 
 ![UN_TER_PerSec](img/un_ter_wps.png)    
 **Figure 6.** Correlation of TER of machine translated sentences versus words translated per second for human translation of the same sentences.
+
+For more information on the UN Parallel Corpus read the [paper](https://www.aclweb.org/anthology/L16-1561) by M. Ziemski et al.
 
 ### Time Taken - Sentence Length
 
