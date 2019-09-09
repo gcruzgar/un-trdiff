@@ -1,0 +1,20 @@
+## Running job 1390282.1 on host db12mem3.arc3.leeds.ac.uk
+##
+## Resources granted:
+##
+## h_vmem = 768G
+## h_rt   = 47:47:47
+## disk   = 20G
+
+
+classification report (French) :
+
+                  precision    recall  f1-score   support
+
+ bad translation       0.66      0.71      0.69     19635
+good translation       0.69      0.63      0.66     19665
+
+        accuracy                           0.67     39300
+       macro avg       0.67      0.67      0.67     39300
+    weighted avg       0.67      0.67      0.67     39300
+

@@ -1,0 +1,20 @@
+## Running job 1390286.1 on host db12mem4.arc3.leeds.ac.uk
+##
+## Resources granted:
+##
+## h_vmem = 768G
+## h_rt   = 47:47:47
+## disk   = 20G
+
+
+classification report (Spanish) :
+
+                  precision    recall  f1-score   support
+
+ bad translation       0.68      0.72      0.70     19355
+good translation       0.71      0.68      0.69     19945
+
+        accuracy                           0.70     39300
+       macro avg       0.70      0.70      0.70     39300
+    weighted avg       0.70      0.70      0.70     39300
+
