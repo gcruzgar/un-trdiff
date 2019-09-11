@@ -1,0 +1,9 @@
+              precision    recall  f1-score   support
+
+    high TER       0.39      0.32      0.35      2981
+ average TER       0.36      0.46      0.41      3044
+     low TER       0.39      0.35      0.37      2970
+
+    accuracy                           0.38      8995
+   macro avg       0.38      0.38      0.38      8995
+weighted avg       0.38      0.38      0.38      8995

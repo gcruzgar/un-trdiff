@@ -2,9 +2,9 @@ classification report:
 
                      precision    recall  f1-score   support
 
-   good translation       0.54      0.44      0.49     13066
-average translation       0.44      0.57      0.50     13219
-    bad translation       0.59      0.53      0.56     13015
+           high TER       0.54      0.44      0.49     13066
+        average TER       0.44      0.57      0.50     13219
+            low TER       0.59      0.53      0.56     13015
 
            accuracy                           0.51     39300
           macro avg       0.53      0.51      0.51     39300
