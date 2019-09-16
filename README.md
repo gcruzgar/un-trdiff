@@ -1,18 +1,6 @@
 # un-trdiff
 Exploration of the United Nations corpus and prediction of translation difficulty.
-See [trdiff]((https://github.com/gcruzgar/trdiff) for more information as well as the scripts used to produce the insights shown below.
-
-## Things to cover
-
-- Descriptive statistics of data
-- Histograms + mean and median values
-- Correlation of sentence length and time taken to translate
-- Show 2 or 3 easy and difficult sentence examples for en-fr and en-es
-- Prediction experiments:
-    + Biber - time per document
-    + Biber - TER
-    + XLM - TER
-    + TER - time per sentence
+See [trdiff](https://github.com/gcruzgar/trdiff) for more information as well as the scripts used to produce the insights shown below.
 
 ## United Nations Corpus
 As one would expect, the time it takes to translate a document is roughly proportional to the number of words it contains (see figure 1). Nonetheless, there is great variance between documents. If time taken was only dependent on the length of a document, the rate of translation (words per day) would be a constant. In the case of the tested UN corpus this would be approximately 1429 words per day. However, as we can see in figure 2, there is a large distribution of translation rates across the documents (standard deviation of 484 words per day). Therefore, there must be other variables causing such differences. 
@@ -31,13 +19,13 @@ Documents can be split into categories depending on things such as the topic of 
 Biber dimensions (lexical, syntactic, text-level... features in texts) can be used to build regression models predicting the rate of translation of documents. A correlation of 0.65 can be obtained using linear regression (see figure 4). 
 
 ![UN_wpd_OLS](img/un_wpd_ols.png)   
-**Figure 4.** Rate of translation of documents predicted using Biber dimensions on a text level. Predicted rate against reported rate. The solid black line shows the real values whilst the red dotted line shows an approximate line of best fit for the results obtained.
+**Figure 4.** Rate of translation of documents predicted using Biber dimensions on a text level. Predicted rate against reported rate. The solid black line shows the real values whilst the red dotted lines show the mean absolute error from the line of best fit. Results obtained on cross-validated 12-fold split of the data.
 
 ![UN_TER_Histogram](img/un_ter_hist.png)    
 **Figure 5.** Distribution of translation edit rate for machine translated sentences with human reference for UN documents after removal of top and bottom 5% of TER scores. Original documents in English translated to Spanish (left) and French (right). 
 
-![UN_TER_PerSec](img/un_ter_wps.png)    
-**Figure 6.** Correlation of TER of machine translated sentences versus words translated per second for human translation of the same sentences.
+![UN_TER_Per-msec](img/french_ter_wpd_MAE.png)    
+**Figure 6.** Correlation of TER of machine translated sentences versus words translated per mili-second for human translation of the same sentences.
 
 For more information on the UN Parallel Corpus read the [paper](https://www.aclweb.org/anthology/L16-1561) by M. Ziemski et al.
 
