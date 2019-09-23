@@ -18,7 +18,7 @@ Documents can be split into categories depending on things such as the topic of 
 
 Biber dimensions (lexical, syntactic, text-level... features in texts) can be used to build regression models predicting the rate of translation of documents. A correlation of 0.65 can be obtained using linear regression (see figure 4). 
 
-![UN_wpd_OLS](img/un_wpd_ols.png)   
+![UN_wpd_OLS](img/biber_wpd_kfold_ols_MAE_b.png)   
 **Figure 4.** Rate of translation of documents predicted using Biber dimensions on a text level. Predicted rate against reported rate. The solid black line shows the real values whilst the red dotted lines show the mean absolute error from the line of best fit. Results obtained on cross-validated 12-fold split of the data.
 
 ![UN_TER_Histogram](img/un_ter_hist.png)    
