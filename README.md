@@ -1,6 +1,6 @@
 # un-trdiff
 Exploration of the United Nations corpus and prediction of translation difficulty.    
-See [trdiff](https://github.com/gcruzgar/trdiff) for more information as well as the scripts used to produce the insights shown below. The [case study](doc/trdiff\ -\ case\ study.pdf) offers a one-page summary of the work conducted.
+See [trdiff](https://github.com/gcruzgar/trdiff) for more information as well as the scripts used to produce the insights shown below. The [case study](doc/trdiff-case_study.pdf) offers a one-page summary of the work conducted.
  
 ## United Nations Corpus
 As one would expect, the time it takes to translate a document is roughly proportional to the number of words it contains (see figure 1). Nonetheless, there is great variance between documents. If time taken was only dependent on the length of a document, the rate of translation (words per day) would be a constant. In the case of the tested UN corpus this would be approximately 1429 words per day. However, as we can see in figure 2, there is a large distribution of translation rates across the documents (standard deviation of 484 words per day). Therefore, there must be other variables causing such differences. 
